@@ -1,33 +1,22 @@
 'use strict';
 window.MovoraCaptcha=(()=>{
-  let loading,widget;
-  const local=()=>location.protocol==='file:'||['localhost','127.0.0.1'].includes(location.hostname);
-  function load(){
-    if(window.grecaptcha?.render)return Promise.resolve();
-    if(loading)return loading;
-    loading=new Promise((resolve,reject)=>{
-      const script=document.createElement('script');
-      const timeout=setTimeout(()=>{script.remove();loading=null;reject(Error('Verification took too long. Please retry.'))},15000);
-      window.movoraCaptchaReady=()=>{clearTimeout(timeout);resolve()};
-      script.src='https://www.google.com/recaptcha/api.js?onload=movoraCaptchaReady&render=explicit&hl=en';
-      script.async=true;script.defer=true;
-      script.onerror=()=>{clearTimeout(timeout);script.remove();loading=null;reject(Error('Verification could not load. Please check your connection and retry.'))};
-      document.head.append(script);
-    });return loading;
-  }
-  async function mount(){
-    const box=document.querySelector('#captcha-box');if(!box)return;
-    if(local()){box.textContent='Local preview: verification is disabled.';return}
-    const status=document.querySelector('#captcha-status');
-    try{
-      await load();if(!box.isConnected)return;
-      widget=grecaptcha.render(box,{sitekey:window.MOVORA_CONFIG.recaptchaSiteKey,callback:()=>{status.textContent='Verification completed.'},'expired-callback':()=>{status.textContent='Verification expired. Please complete it again.'},'error-callback':()=>{status.textContent='Verification failed. Please check your connection and retry.'}});
-    }catch(error){status.textContent=error.message;const retry=document.createElement('button');retry.type='button';retry.textContent='Retry verification';retry.onclick=()=>{retry.remove();mount()};box.append(retry)}
-  }
-  function requireResponse(){
-    if(local())return;
-    if(widget===undefined||!window.grecaptcha?.getResponse(widget))throw Error('Please complete the verification before continuing.');
-    // A browser response is not a trusted verification. Backend enforcement is pending.
-  }
-  return {mount,requireResponse};
+ let loading;
+ const local=()=>location.protocol==='file:'||['localhost','127.0.0.1'].includes(location.hostname);
+ function load(){
+  if(!window.MOVORA_CONFIG.recaptchaSiteKey)return Promise.reject(Error('reCAPTCHA v3 is not configured yet. Please contact the researcher.'));
+  if(loading)return loading;
+  loading=new Promise((resolve,reject)=>{
+   const script=document.createElement('script');const timeout=setTimeout(()=>{script.remove();loading=null;reject(Error('Verification timed out. Please try again.'))},15000);
+   script.src='https://www.google.com/recaptcha/api.js?render='+encodeURIComponent(window.MOVORA_CONFIG.recaptchaSiteKey)+'&hl=en';script.async=true;
+   script.onload=()=>grecaptcha.ready(()=>{clearTimeout(timeout);resolve()});script.onerror=()=>{clearTimeout(timeout);script.remove();loading=null;reject(Error('Verification could not load. Please check your connection and retry.'))};document.head.append(script);
+  });return loading;
+ }
+ function mount(){const box=document.querySelector('#captcha-box');if(box)box.textContent=local()?'Local preview: verification is disabled.':'Verification runs automatically when you click Next.'}
+ async function requireResponse(){
+  if(local())return;
+  await load();const token=await grecaptcha.execute(window.MOVORA_CONFIG.recaptchaSiteKey,{action:'study_entry'});
+  const result=await window.MovoraCloud.verifyCaptcha(token);
+  s.ReCaptcha_Score=result.score;s.recaptcha={version:'v3',verified:true,action:'study_entry',verifiedAt:result.verified_at};save();
+ }
+ return{mount,requireResponse};
 })();

@@ -34,5 +34,6 @@ window.MovoraCloud=(()=>{
  async function complete(){clearTimeout(timer);await write(true)}
  setInterval(()=>{if(typeof s!=='undefined'&&s&&!s.completedAt&&s.connectId)write().catch(()=>{})},15000);
  window.addEventListener('online',changed);
- return{changed,complete};
+ async function verifyCaptcha(token){const session=await auth();return request('/functions/v1/verify-recaptcha',{method:'POST',headers:{Authorization:'Bearer '+session.access_token},body:JSON.stringify({token,response_id:s.id})})}
+ return{changed,complete,verifyCaptcha};
 })();
