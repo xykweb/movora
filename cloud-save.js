@@ -20,7 +20,7 @@ window.MovoraCloud=(()=>{
  function status(message){let box=document.querySelector('#cloud-status');if(!box){box=document.createElement('p');box.id='cloud-status';box.setAttribute('role','status');document.body.append(box)}box.textContent=message;box.hidden=!message}
  function write(completed=false){
   const responseKey=key;
-  const snapshot=JSON.parse(JSON.stringify(s));
+  const snapshot=JSON.parse(JSON.stringify(s));if(snapshot.source==='local-preview')snapshot.source='preview';if(!['connect','preview'].includes(snapshot.source))return Promise.reject(Error('Unsupported saved study source. Please contact the researcher without clearing browser data.'));
   const work=queue.catch(()=>{}).then(async()=>{
    if(responseKey!==key)return;
    const session=await auth();
