@@ -11,7 +11,7 @@ window.MovoraCaptcha=(()=>{
    script.onload=()=>grecaptcha.ready(()=>{clearTimeout(timeout);resolve()});script.onerror=()=>{clearTimeout(timeout);script.remove();loading=null;reject(Error('Verification could not load. Please check your connection and retry.'))};document.head.append(script);
   });return loading;
  }
- function mount(){const box=document.querySelector('#captcha-box');if(box)box.textContent=local()?'Local preview: verification is disabled.':''}
+ function mount(){const box=document.querySelector('#captcha-box');if(box)box.textContent=''}
  async function requireResponse(){
   if(local())return;
   await load();const token=await grecaptcha.execute(window.MOVORA_CONFIG.recaptchaSiteKey,{action:'study_entry'});
