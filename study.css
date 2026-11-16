@@ -77,3 +77,4 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 .completion-card #copy-code{display:block;margin:24px auto 0}
 .completion-card #copy-status{text-align:center}
 .captcha-question:has(#captcha-box:empty):has(#captcha-status:empty){display:none}
+#network-notice{position:fixed;top:0;left:0;right:0;z-index:200;background:#fff0d6;color:#4c3511;padding:12px 24px;margin:0;font:16px/1.5 Arial,sans-serif}
