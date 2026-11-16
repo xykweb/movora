@@ -73,3 +73,4 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 #cloud-status{position:fixed;bottom:12px;left:24px;right:24px;margin:0;padding:12px 18px;border:1px solid #e2becd;background:#fff7fa;color:#63233e;font:15px/1.5 Arial,sans-serif;z-index:100}
 /* Override the earlier, more specific first-paragraph indentation. */
 .arousal-question>p:not(.survey-intro):first-of-type{padding-left:0;margin-left:18px}
+.content-update-notice{margin:0 auto 24px;padding:18px 24px;max-width:1080px;background:#fff4f8;border:1px solid #e5b7ca;border-radius:8px;font:16px/1.6 Arial,sans-serif}.content-update-notice p{margin:0 0 12px}
