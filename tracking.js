@@ -11,6 +11,14 @@ window.MovoraTracking=(()=>{
  }
  function event(type,detail={}){checkpoint();s.events ||= [];s.events.push({type,at:new Date().toISOString(),page:s.page,pairIndex:s.page===3?(s.pairIndex||0):null,...detail});}
  function refreshExports(){
+  const zone=Intl.DateTimeFormat().resolvedOptions().timeZone;
+  s.TimeZone ||= zone;
+  const localDate=value=>{if(!value)return null;const d=new Date(value);if(Number.isNaN(d.getTime()))return null;return new Intl.DateTimeFormat('sv-SE',{timeZone:s.TimeZone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).format(d)};
+  s.StartDateLocal=localDate(s.startedAt);s.EndDateLocal=localDate(s.completedAt);
+  const ua=navigator.userAgent;
+  s.DeviceType ||= /iPad|Tablet/i.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)?'Tablet':/Mobi|Android|iPhone|iPod/i.test(ua)?'Mobile':'Desktop/Laptop';
+  s.BrowserType ||= /Edg\//.test(ua)?'Edge':/OPR\//.test(ua)?'Opera':/Firefox|FxiOS/.test(ua)?'Firefox':/Chrome|CriOS/.test(ua)?'Chrome':/Safari/.test(ua)?'Safari':'Other';
+
   if(!Object.prototype.hasOwnProperty.call(s,'ReCaptcha_Score'))s.ReCaptcha_Score=null;
   s.genreOrder=s.pairs.map(p=>p.genre);
   s.stimulusManifest=s.pairs.flatMap((pair,index)=>pair.items.map((item,side)=>({...item,genre:pair.genre,genreId:pair.id,presentationOrder:index+1,side:side===0?'left':'right',longTitle:item.titleId.endsWith('a')?1:0,mapping:pair.mapping})));
