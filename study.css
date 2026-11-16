@@ -62,3 +62,12 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 .gender-options label{display:flex;align-items:center;gap:12px;font:400 21px/1.65 Arial,Helvetica,sans-serif;color:#222;cursor:pointer}
 .gender-options input{width:20px;height:20px;margin:0;accent-color:#c92868;flex-shrink:0}
 .captcha-question{border:1px solid #e8dce2;border-radius:8px;padding:22px;margin:8px 0 24px}.captcha-question>p{font-size:19px;color:#222}.captcha-question #captcha-status{font-size:16px;margin:12px 0 0}
+.intro-page h1{text-align:center}
+.intro-page form>.task-note{font-size:20px;font-style:italic}
+.next{float:none;display:block;margin:28px auto 0}
+.feedback-page .next{margin:28px auto 0}
+.pair-actions{justify-content:center;padding-right:0}
+.arousal-question>p{margin-left:18px;padding-left:0}
+.arousal-question>p:first-child::before{left:-18px}
+.feedback-page form>.optional-question::before{content:none}
+#cloud-status{position:fixed;bottom:12px;left:24px;right:24px;margin:0;padding:12px 18px;border:1px solid #e2becd;background:#fff7fa;color:#63233e;font:15px/1.5 Arial,sans-serif;z-index:100}
