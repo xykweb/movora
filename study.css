@@ -61,3 +61,4 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 .gender-options{display:grid;gap:12px}
 .gender-options label{display:flex;align-items:center;gap:12px;font:400 21px/1.65 Arial,Helvetica,sans-serif;color:#222;cursor:pointer}
 .gender-options input{width:20px;height:20px;margin:0;accent-color:#c92868;flex-shrink:0}
+.captcha-question{border:1px solid #e8dce2;border-radius:8px;padding:22px;margin:8px 0 24px}.captcha-question>p{font-size:19px;color:#222}.captcha-question #captcha-status{font-size:16px;margin:12px 0 0}
