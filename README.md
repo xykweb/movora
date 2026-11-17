@@ -1,18 +1,17 @@
-# Movora
+# Movora — editing guide
 
-本地预览：双击index.html，或双击启动网站.command。
+## Where to edit
+- Questionnaire item wording and anchors: research/word-paragraphs.json → questions → stable id (q1, q2, q3…). Change text, low and high. Do not rename IDs.
+- Instruction paragraphs and manipulation wording: research/word-paragraphs.json → paragraphs. Current selection still uses paragraph prefixes; ask for a matching code update if changing a paragraph's opening words.
+- Movie titles and genres: assets/dramas.xlsx (Genre / ItemNumber / Title; a=long, b=short).
+- Page headings, button labels, public configuration and behavior: app.js.
+- Visual styles: study.css.
 
-网站运行文件：
-- index.html：入口。
-- app.js：全部自定义运行代码、公开配置和双击预览内容快照。
-- study.css：视觉样式。
-- vendor/xlsx.full.min.js及许可：第三方Excel读取库。
-- assets/：图片、Word和Excel来源文件。
-- research/：研究约定、数据字典及文案JSON。
-- supabase/：建表/升级SQL、Edge Function及配置说明，不需要上传到GitHub Pages。
+There is one current questionnaire source: research/word-paragraphs.json. app.js no longer overrides Q2/Q3 and has no embedded legacy questionnaire or movie-title snapshot. assets/指导语.docx was removed because it was obsolete. Supabase SQL migration files describe historical database upgrades; they are not runtime questionnaire sources.
 
-GitHub更新时，以本目录为准，删除旧startup.js、study.js、tracking.js、cloud-save.js、recaptcha.js、study-config.js及content/local-preview.js。不要修改远程数据库或删除数据表。公开配置在app.js内搜索MOVORA_CONFIG；Secret Key不能放入app.js。
+## Preview and publishing
+Double-click 启动网站.command to open a local HTTP preview. Directly opening index.html with file:// is no longer supported: browsers block JSON/Excel reads and the duplicated fallback has been removed to prevent stale stimuli.
 
-线上及本地服务器读取assets/dramas.xlsx。直接双击HTML使用app.js内置快照；更新Excel后需同步内置快照。所有历史分配保留实际标题版本。
+Upload index.html, app.js, study.css, research/word-paragraphs.json, assets/ and vendor/ as applicable. After editing questionnaire JSON, upload that JSON; no JavaScript edit is needed for text/anchor changes with unchanged IDs. A loaded page must be reloaded to read new content. Ongoing response stimulus assignments are preserved across reloads.
 
-Supabase Edge Function在服务器运行，不能并入公开网页app.js。
+Supabase functions and SQL remain in supabase/ and run separately on the server. Do not upload secrets. The dictionary must be synchronized when question wording or coding changes. Do not edit old migration scripts to change the running website.
