@@ -78,3 +78,4 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 .completion-card #copy-status{text-align:center}
 .captcha-question:has(#captcha-box:empty):has(#captcha-status:empty){display:none}
 #network-notice{position:fixed;top:0;left:0;right:0;z-index:200;background:#fff0d6;color:#4c3511;padding:12px 24px;margin:0;font:16px/1.5 Arial,sans-serif}
+.loading-spinner{display:inline-block;width:18px;height:18px;border:2px solid #ffffff66;border-top-color:#fff;border-radius:50%;vertical-align:-3px;margin-right:9px;animation:entry-spin .8s linear infinite}.entry-loading{text-align:center;font:17px/1.5 Arial,sans-serif!important;color:#444!important;margin:22px 0 0!important}@keyframes entry-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.loading-spinner{animation:none}}
