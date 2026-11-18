@@ -1,3 +1,7 @@
+# Current release: 2026-11-19
+Instrument movie-questionnaire-v4-wordtask9: nine word-task items; original IDs 1,2,4,5,6,8,9,10,12, displayed as 1–9. Individual centered word frames and worked example. Separate Task III introduction, then affect grid, four scale pages and demographics. The two v3 time-scarcity checks are no longer administered or required. Run 013_task9_no_manipulation_check.sql after 012 before uploading this frontend. Original response/export columns remain available for historical records. JavaScript syntax and mock page rendering verified; live database and browser appearance not verified.
+
+## Historical notes (do not use as current setup)
 
 Poster delivery optimization: originals in assets/poster remain untouched. Runtime uses assets/poster-web/*.webp, 1000×1400, WebP quality 85, same aspect ratio and composition. Total 12-poster transfer falls from 11.03MB to 1.94MB. Preloading starts at manipulation/instructions, loads two posters at a time in assigned order and caches promises. Preload failures/timeouts do not prevent progression; current pair still requires both images decoded before enabling choices. Existing active snapshots retain originalImage when path is updated. Freeze the derivative set during recruitment. No deployed-network timing measurement performed.
 
