@@ -79,3 +79,7 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 .captcha-question:has(#captcha-box:empty):has(#captcha-status:empty){display:none}
 #network-notice{position:fixed;top:0;left:0;right:0;z-index:200;background:#fff0d6;color:#4c3511;padding:12px 24px;margin:0;font:16px/1.5 Arial,sans-serif}
 .loading-spinner{display:inline-block;width:18px;height:18px;border:2px solid #ffffff66;border-top-color:#fff;border-radius:50%;vertical-align:-3px;margin-right:9px;animation:entry-spin .8s linear infinite}.entry-loading{text-align:center;font:17px/1.5 Arial,sans-serif!important;color:#444!important;margin:22px 0 0!important}@keyframes entry-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.loading-spinner{animation:none}}
+.poster-spinner{border-color:#c9286840;border-top-color:#c92868}
+/* Reserve exactly two title lines above the shared metadata baseline. */
+.movie-details h2{line-height:1.45;height:calc(2 * 1.45em + 19px);min-height:calc(2 * 1.45em + 19px);flex-shrink:0;box-sizing:border-box;padding-bottom:18px;margin-bottom:18px}
+.intro-page .word-task-item{display:block;border:1px solid #e8dce2;border-radius:8px;padding:18px 22px;margin:0 0 18px;background:#fff;font-size:21px}.word-task-item input{margin:12px 0 0}
