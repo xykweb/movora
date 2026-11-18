@@ -4,10 +4,6 @@
     "This survey comes from Movora, which is an upcoming streaming platform featuring AI-generated movies. Before launch, we would like to better understand viewers’ preferences. We thus invite you to explore our website, discover streaming movies that interest you, and share your feedback.",
     "To ensure the best experience, please complete the survey in full-screen mode. After completing the survey, you can press the ESC key to exit full-screen mode. However, please do not exit early, as doing so may significantly affect your survey experience.",
     "If you are ready, enter your Connect ID below and click Next to enter full-screen mode.",
-    "Recent research has found that Americans are busier than people in other developed countries.",
-    "Please think about your daily life and list three activities that keep you busy. Briefly describe each activity in the spaces below.",
-    "We want to understand the different activities that Americans engage in during their daily lives.",
-    "Please think about a typical day in your life and list three activities that you usually do. Briefly describe each activity in the spaces below.",
     "Movora is testing several concept posters for upcoming movie projects to understand which movies are more appealing to potential audiences. Next, you will enter Movora and explore a series of movie posters across different genres. For each pair, please choose the movie you would be more interested in watching. There are no right or wrong answers. Please make each choice based on your first impression and personal preference. Each choice will be between two movies.",
     "Note: Some follow-up questions will be based on the movies you choose and will ask about your specific opinions of these movies.",
     "Please select one square in the grid below to indicate how you would like to feel compared with how you feel right now.",
@@ -90,12 +86,6 @@
       "high": "Strongly agree"
     },
     {
-      "id": "q13",
-      "text": "How busy did you feel when making your selections?",
-      "low": "Not at all",
-      "high": "Very much"
-    },
-    {
       "id": "q15",
       "text": "How much do you like watching AI-generated movies?",
       "low": "Not at all",
@@ -106,6 +96,228 @@
       "text": "To what extent do you feel financially constrained?",
       "low": "Not financially constrained at all",
       "high": "Very financially constrained"
+    },
+    {
+      "id": "mc_time_pressed",
+      "text": "Right now, I feel that I am pressed for time.",
+      "low": "Strongly disagree",
+      "high": "Strongly agree"
+    },
+    {
+      "id": "mc_time_constricted",
+      "text": "Right now, I feel that the time I have available is constricted.",
+      "low": "Not at all",
+      "high": "Very much"
     }
-  ]
+  ],
+  "wordTask": {
+    "introduction": "As Movora prepares to launch in the United States, we’d like to learn more about the daily lives of our potential viewers and the kinds of movies they like to watch. We’ll start with a short word puzzle about everyday life. Then you’ll explore Movora and tell us which movies you’d be interested in watching.",
+    "instructions": "Below are 12 groups of five words. For each group, choose four words and put them in order to make a phrase or sentence. Type your answer in the box below each group, leaving out the extra word.",
+    "items": [
+      {
+        "id": 1,
+        "busy": [
+          "blue",
+          "wool",
+          "coat",
+          "the",
+          "spoon"
+        ],
+        "control": [
+          "blue",
+          "wool",
+          "coat",
+          "the",
+          "spoon"
+        ]
+      },
+      {
+        "id": 2,
+        "busy": [
+          "not",
+          "available",
+          "enough",
+          "time",
+          "much"
+        ],
+        "control": [
+          "the",
+          "wooden",
+          "beside",
+          "small",
+          "bridge"
+        ]
+      },
+      {
+        "id": 3,
+        "busy": [
+          "basket",
+          "in",
+          "apples",
+          "a",
+          "reads"
+        ],
+        "control": [
+          "basket",
+          "in",
+          "apples",
+          "a",
+          "reads"
+        ]
+      },
+      {
+        "id": 4,
+        "busy": [
+          "time",
+          "I",
+          "need",
+          "more",
+          "carpet"
+        ],
+        "control": [
+          "I",
+          "see",
+          "mountains",
+          "distant",
+          "spoon"
+        ]
+      },
+      {
+        "id": 5,
+        "busy": [
+          "a",
+          "round",
+          "swims",
+          "glass",
+          "bowl"
+        ],
+        "control": [
+          "a",
+          "round",
+          "swims",
+          "glass",
+          "bowl"
+        ]
+      },
+      {
+        "id": 6,
+        "busy": [
+          "time",
+          "my",
+          "limited",
+          "feels",
+          "jacket"
+        ],
+        "control": [
+          "coffee",
+          "my",
+          "warm",
+          "feels",
+          "button"
+        ]
+      },
+      {
+        "id": 7,
+        "busy": [
+          "the",
+          "curtain",
+          "softly",
+          "moves",
+          "pencil"
+        ],
+        "control": [
+          "the",
+          "curtain",
+          "softly",
+          "moves",
+          "pencil"
+        ]
+      },
+      {
+        "id": 8,
+        "busy": [
+          "little",
+          "left",
+          "very",
+          "time",
+          "pillow"
+        ],
+        "control": [
+          "small",
+          "bird",
+          "a",
+          "very",
+          "pencil"
+        ]
+      },
+      {
+        "id": 9,
+        "busy": [
+          "the",
+          "wooden",
+          "beside",
+          "a",
+          "door"
+        ],
+        "control": [
+          "the",
+          "wooden",
+          "beside",
+          "a",
+          "door"
+        ]
+      },
+      {
+        "id": 10,
+        "busy": [
+          "out",
+          "time",
+          "running",
+          "is",
+          "mirror"
+        ],
+        "control": [
+          "the",
+          "shining",
+          "is",
+          "sun",
+          "basket"
+        ]
+      },
+      {
+        "id": 11,
+        "busy": [
+          "flowers",
+          "of",
+          "a",
+          "vase",
+          "reads"
+        ],
+        "control": [
+          "flowers",
+          "of",
+          "a",
+          "vase",
+          "reads"
+        ]
+      },
+      {
+        "id": 12,
+        "busy": [
+          "time",
+          "enough",
+          "I",
+          "lack",
+          "window"
+        ],
+        "control": [
+          "I",
+          "collect",
+          "colorful",
+          "stamps",
+          "quiet"
+        ]
+      }
+    ]
+  }
 }
