@@ -83,3 +83,6 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 /* Reserve exactly two title lines above the shared metadata baseline. */
 .movie-details h2{line-height:1.45;height:calc(2 * 1.45em + 19px);min-height:calc(2 * 1.45em + 19px);flex-shrink:0;box-sizing:border-box;padding-bottom:18px;margin-bottom:18px}
 .intro-page .word-task-item{display:block;border:1px solid #e8dce2;border-radius:8px;padding:18px 22px;margin:0 0 18px;background:#fff;font-size:21px}.word-task-item input{margin:12px 0 0}
+
+/* Current Task I and title alignment. */
+.word-tokens{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:14px 0 20px}.word-token{display:inline-flex;align-items:center;justify-content:center;min-width:72px;padding:8px 18px;border:1px solid #dcc7d1;border-radius:7px;background:#fcf8fa;color:#252225;font-weight:400}.word-item-number{display:block;color:#555;font-size:17px}.word-example{padding:20px 24px;margin:0 0 28px;border-left:3px solid #c92868;background:#fcf8fa;border-radius:6px}.word-example p{margin-bottom:0}.example-words{margin-top:10px}.word-example .word-tokens{display:inline-flex;margin:0 0 12px 12px;vertical-align:middle}.word-example .word-token{min-width:0;padding:5px 12px}.movie-details h2{display:flex;align-items:center;padding-top:0;padding-bottom:18px}
