@@ -21,3 +21,5 @@ Task III begins with a separate introduction page and Okay, I got it. button, fo
 Task I interaction: ordered clicks on four of five words; clicking a selected word removes it. Stores ordered word indices under wordPuzzle.selections, joined answer text under wordPuzzle.answers, interactionMode ordered-word-clicks, and word_selection_change events. Source item IDs and export columns unchanged; 013 submission validation remains applicable.
 
 Task I now has ten screens: introduction/example with Start, followed by nine single-item screens. Four selected words trigger a 1000 ms delay; deselection cancels the timer. Confirmation events and confirmedItems record progression. Completion is based on selecting four supplied words; semantic sentence correctness is not automatically graded.
+
+Current instrument movie-questionnaire-v5-wordtask12-correct: all 12 original items restored, introduction plus 12 item screens. Correct ordered answer required; Correct! displayed for 1000 ms before automatic advance. Accepted alternatives are explicit in wordTask.items[].acceptedAnswers. Latest migration 014_wordtask12_correct.sql validates correct answers server-side.

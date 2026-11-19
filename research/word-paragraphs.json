@@ -95,7 +95,7 @@
   ],
   "wordTask": {
     "introduction": "As Movora prepares to launch in the United States, we’d like to learn more about the daily lives of our potential viewers and the kinds of movies they like to watch. We’ll start with a short word puzzle about everyday life. Then you’ll explore Movora and tell us which movies you’d be interested in watching.",
-    "instructions": "You will see 9 groups of five words, one group per page. For each group, click four words in order to make a phrase or sentence, leaving out the extra word. Your answer will appear below the words. To change your answer, click a selected word again to remove it. Once you have selected four words, the next item will appear automatically after one second.",
+    "instructions": "You will see 12 groups of five words. For each group, click four words in order to make a phrase or sentence, leaving out the extra word. You can change your answer by clicking a selected word again to remove it. Once you have formed a correct phrase or sentence, the next item will appear automatically after one second.",
     "items": [
       {
         "id": 1,
@@ -112,7 +112,15 @@
           "coat",
           "the",
           "spoon"
-        ]
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "the blue wool coat"
+          ],
+          "control": [
+            "the blue wool coat"
+          ]
+        }
       },
       {
         "id": 2,
@@ -129,7 +137,43 @@
           "beside",
           "small",
           "bridge"
-        ]
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "not enough time available",
+            "not much time available"
+          ],
+          "control": [
+            "the small wooden bridge",
+            "beside the wooden bridge",
+            "beside the small bridge"
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "busy": [
+          "basket",
+          "in",
+          "apples",
+          "a",
+          "reads"
+        ],
+        "control": [
+          "basket",
+          "in",
+          "apples",
+          "a",
+          "reads"
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "apples in a basket"
+          ],
+          "control": [
+            "apples in a basket"
+          ]
+        }
       },
       {
         "id": 4,
@@ -146,7 +190,15 @@
           "mountains",
           "distant",
           "spoon"
-        ]
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "I need more time"
+          ],
+          "control": [
+            "I see distant mountains"
+          ]
+        }
       },
       {
         "id": 5,
@@ -163,7 +215,15 @@
           "swims",
           "glass",
           "bowl"
-        ]
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "a round glass bowl"
+          ],
+          "control": [
+            "a round glass bowl"
+          ]
+        }
       },
       {
         "id": 6,
@@ -180,7 +240,42 @@
           "warm",
           "feels",
           "button"
-        ]
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "my time feels limited"
+          ],
+          "control": [
+            "my coffee feels warm"
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "busy": [
+          "the",
+          "curtain",
+          "softly",
+          "moves",
+          "pencil"
+        ],
+        "control": [
+          "the",
+          "curtain",
+          "softly",
+          "moves",
+          "pencil"
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "the curtain moves softly",
+            "the curtain softly moves"
+          ],
+          "control": [
+            "the curtain moves softly",
+            "the curtain softly moves"
+          ]
+        }
       },
       {
         "id": 8,
@@ -197,7 +292,15 @@
           "a",
           "very",
           "pencil"
-        ]
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "very little time left"
+          ],
+          "control": [
+            "a very small bird"
+          ]
+        }
       },
       {
         "id": 9,
@@ -214,7 +317,17 @@
           "beside",
           "a",
           "door"
-        ]
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "beside the wooden door",
+            "beside a wooden door"
+          ],
+          "control": [
+            "beside the wooden door",
+            "beside a wooden door"
+          ]
+        }
       },
       {
         "id": 10,
@@ -231,7 +344,40 @@
           "is",
           "sun",
           "basket"
-        ]
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "time is running out"
+          ],
+          "control": [
+            "the sun is shining"
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "busy": [
+          "flowers",
+          "of",
+          "a",
+          "vase",
+          "reads"
+        ],
+        "control": [
+          "flowers",
+          "of",
+          "a",
+          "vase",
+          "reads"
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "a vase of flowers"
+          ],
+          "control": [
+            "a vase of flowers"
+          ]
+        }
       },
       {
         "id": 12,
@@ -248,7 +394,15 @@
           "colorful",
           "stamps",
           "quiet"
-        ]
+        ],
+        "acceptedAnswers": {
+          "busy": [
+            "I lack enough time"
+          ],
+          "control": [
+            "I collect colorful stamps"
+          ]
+        }
       }
     ],
     "example": {
