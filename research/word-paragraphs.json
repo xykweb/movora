@@ -4,7 +4,7 @@
     "This survey comes from Movora, which is an upcoming streaming platform featuring AI-generated movies. Before launch, we would like to better understand viewers’ preferences. We thus invite you to explore our website, discover streaming movies that interest you, and share your feedback.",
     "To ensure the best experience, please complete the survey in full-screen mode. After completing the survey, you can press the ESC key to exit full-screen mode. However, please do not exit early, as doing so may significantly affect your survey experience.",
     "If you are ready, enter your Connect ID below and click Next to enter full-screen mode.",
-    "Movora is testing several concept posters for upcoming movie projects to understand which movies are more appealing to potential audiences. Next, you will enter Movora and explore a series of movie posters across different genres. For each pair, please choose the movie you would be more interested in watching. There are no right or wrong answers. Please make each choice based on your first impression and personal preference. Each choice will be between two movies.",
+    "Movora is testing several concept posters for upcoming movie projects to understand which movies are more appealing to potential audiences. Next, you will enter Movora and explore a series of movies across different genres. For each pair, please choose the movie you would be more interested in watching. There are no right or wrong answers. Please make each choice based on your first impression and personal preference. Each choice will be between two movies.",
     "Note: Some follow-up questions will be based on the movies you choose and will ask about your specific opinions of these movies."
   ],
   "questions": [
@@ -418,9 +418,14 @@
   },
   "surveyIntroduction": "In this section, we would like to hear about your thoughts during the experience. Please answer the following questions based on your true thoughts.",
   "affectInstructions": [
-    "We’d like to learn about your current affective state and how you would like it to change, if at all. Please select one square in the grid below to indicate how you would like to feel compared with how you feel right now.",
+    "Now, we’d like to learn about your desired subjective state when selecting those movies. Please select one square in the grid below to indicate how you would like to feel compared with how you feel right now.",
     "- Up or down: Select a square higher up if you need more arousal—that is, to feel more alert and stimulated—or lower down if you need less arousal.",
     "- Left or right: Select a square farther to the right if you need to feel more pleasant, or farther to the left if you need to feel less pleasant.",
     "The center square, marked N, represents your current state. Select this square if you do not need a change in either direction. Squares farther from the center indicate a greater desired change. Please consider both directions when choosing your square."
-  ]
+  ],
+  "weeklyWorkHours": {
+    "text": "How many hours per week do you usually work for pay?",
+    "note": "(Include hours from all paid jobs, including part-time work and self-employment. If you do not currently work for pay, please enter 0).",
+    "unit": "hours per week"
+  }
 }

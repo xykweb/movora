@@ -25,3 +25,5 @@ Task I now has ten screens: introduction/example with Start, followed by nine si
 Current instrument movie-questionnaire-v5-wordtask12-correct: all 12 original items restored, introduction plus 12 item screens. Correct ordered answer required; Correct! displayed for 1000 ms before automatic advance. Accepted alternatives are explicit in wordTask.items[].acceptedAnswers. Latest migration 014_wordtask12_correct.sql validates correct answers server-side.
 
 Word help: each completed incorrect four-word attempt increments wordPuzzle.errors[itemId]. After two errors, Need help? appears. Clicking it displays the first accepted answer and records wordPuzzle.helpUsed[itemId] and a word_help_used event. Partial selections do not count as errors.
+
+Weekly paid work hours follows monthly income. Required numeric 0–168; 0 for no paid work; exported as Weekly_Work_Hours. Historical missing values remain NULL. demographicsVersion weekly-work-hours-v1 identifies collection. Apply migration 016 after 015. Affect introduction now refers to desired subjective state when selecting movies; directional anchors unchanged.

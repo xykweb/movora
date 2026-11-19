@@ -1,3 +1,6 @@
+# Entry loading optimization — 2026-11-19
+The first page preloads the reCAPTCHA script and prepares anonymous auth concurrently. Next still creates a fresh token and waits for trusted server verification. Prewarm failures are silent and retried on Next; existing request timeouts remain. Google and Supabase preconnect hints added. No remote latency measurements were performed.
+
 # Audit 2026-11-19: current release
 Current instrument v5 has 12 correct-answer word items. Run 015_wordtask_timing.sql after 014. Item timing is accumulated while the page runs, survives refresh, and excludes closed-page time. answerSeconds/answerVisibleSeconds stop at a correct selection and exclude the one-second advance delay; elapsedSeconds includes that delay. Incorrect attempts and help requests are preserved. Movie repeat-click cancellation now has a single handler. Syntax and mocked interaction tests are local evidence only; live RLS, function deployment, database migration and actual network behavior still require a deployed smoke test.
 
