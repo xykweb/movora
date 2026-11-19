@@ -23,3 +23,5 @@ Task I interaction: ordered clicks on four of five words; clicking a selected wo
 Task I now has ten screens: introduction/example with Start, followed by nine single-item screens. Four selected words trigger a 1000 ms delay; deselection cancels the timer. Confirmation events and confirmedItems record progression. Completion is based on selecting four supplied words; semantic sentence correctness is not automatically graded.
 
 Current instrument movie-questionnaire-v5-wordtask12-correct: all 12 original items restored, introduction plus 12 item screens. Correct ordered answer required; Correct! displayed for 1000 ms before automatic advance. Accepted alternatives are explicit in wordTask.items[].acceptedAnswers. Latest migration 014_wordtask12_correct.sql validates correct answers server-side.
+
+Word help: each completed incorrect four-word attempt increments wordPuzzle.errors[itemId]. After two errors, Need help? appears. Clicking it displays the first accepted answer and records wordPuzzle.helpUsed[itemId] and a word_help_used event. Partial selections do not count as errors.

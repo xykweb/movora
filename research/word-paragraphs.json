@@ -95,7 +95,7 @@
   ],
   "wordTask": {
     "introduction": "As Movora prepares to launch in the United States, we’d like to learn more about the daily lives of our potential viewers and the kinds of movies they like to watch. We’ll start with a short word puzzle about everyday life. Then you’ll explore Movora and tell us which movies you’d be interested in watching.",
-    "instructions": "You will see 12 groups of five words. For each group, click four words in order to make a phrase or sentence, leaving out the extra word. You can change your answer by clicking a selected word again to remove it. Once you have formed a correct phrase or sentence, the next item will appear automatically after one second.",
+    "instructions": "Next, you will see 12 groups of five words. For each group, click four words in order to make a phrase or sentence, leaving out the extra word. You can change your answer by clicking a selected word again to remove it. Once you have formed a correct phrase or sentence, the next item will appear automatically.",
     "items": [
       {
         "id": 1,
