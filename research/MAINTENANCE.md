@@ -1,3 +1,6 @@
+# Audit 2026-11-19: current release
+Current instrument v5 has 12 correct-answer word items. Run 015_wordtask_timing.sql after 014. Item timing is accumulated while the page runs, survives refresh, and excludes closed-page time. answerSeconds/answerVisibleSeconds stop at a correct selection and exclude the one-second advance delay; elapsedSeconds includes that delay. Incorrect attempts and help requests are preserved. Movie repeat-click cancellation now has a single handler. Syntax and mocked interaction tests are local evidence only; live RLS, function deployment, database migration and actual network behavior still require a deployed smoke test.
+
 # Current release: 2026-11-19
 Instrument movie-questionnaire-v4-wordtask9: nine word-task items; original IDs 1,2,4,5,6,8,9,10,12, displayed as 1–9. Individual centered word frames and worked example. Separate Task III introduction, then affect grid, four scale pages and demographics. The two v3 time-scarcity checks are no longer administered or required. Run 013_task9_no_manipulation_check.sql after 012 before uploading this frontend. Original response/export columns remain available for historical records. JavaScript syntax and mock page rendering verified; live database and browser appearance not verified.
 
