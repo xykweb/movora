@@ -19,3 +19,5 @@ Supabase functions and SQL remain in supabase/ and run separately on the server.
 
 ## Current database upgrade
 For the word-task update, run supabase/013_task9_no_manipulation_check.sql after 011 and 012 in the Supabase web SQL Editor, after the earlier migrations. It updates submission validation, export columns and the English dictionary. Older SQL files are migration history, not current wording sources. Do not rerun old migrations after the latest migration: they can restore retired validation or dictionary definitions. Applying a local SQL file to the live database has not been verified here.
+
+Latest timing update: run supabase/015_wordtask_timing.sql after 014. Word_Task_1_Seconds through Word_Task_12_Seconds are seconds to the latest correct answer, excluding the automatic advance delay. Visible_Seconds excludes background-tab time; Elapsed_Seconds includes the delay. Older responses without item timing remain NULL. Export SQL results as CSV rather than selected rows in Table Editor.
