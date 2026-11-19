@@ -35,11 +35,11 @@ window.MovoraCaptcha=(()=>{
    script.onload=()=>grecaptcha.ready(()=>{clearTimeout(timeout);resolve()});script.onerror=()=>{clearTimeout(timeout);script.remove();loading=null;reject(Error('Verification could not load. Please check your connection and retry.'))};document.head.append(script);
   });return loading;
  }
- function mount(){const box=document.querySelector('#captcha-box');if(box)box.textContent=''}
+ function mount(){const box=document.querySelector('#captcha-box');if(box)box.textContent='';if(!local()){void load().catch(()=>{});void window.MovoraCloud.prepare().catch(()=>{});}}
  async function requireResponse(){
   if(local())return;
   if(navigator.onLine===false)throw Error('You are offline. Please reconnect and click Next again.');
-  await load();let timeout;let token;try{token=await Promise.race([grecaptcha.execute(window.MOVORA_CONFIG.recaptchaSiteKey,{action:'study_entry'}),new Promise((_,reject)=>{timeout=setTimeout(()=>reject(Error('Verification timed out. Please click Next to retry.')),15000)})])}finally{clearTimeout(timeout)}
+  await Promise.all([load(),window.MovoraCloud.prepare()]);let timeout;let token;try{token=await Promise.race([grecaptcha.execute(window.MOVORA_CONFIG.recaptchaSiteKey,{action:'study_entry'}),new Promise((_,reject)=>{timeout=setTimeout(()=>reject(Error('Verification timed out. Please click Next to retry.')),15000)})])}finally{clearTimeout(timeout)}
   const result=await window.MovoraCloud.verifyCaptcha(token);
   if(typeof result.score!=='number'||!Number.isFinite(result.score)||result.score<0||result.score>1||typeof result.verified_at!=='string')throw Error('The verification server did not return a valid v3 score. Please contact the researcher.');
   s.ReCaptcha_Score=result.score;s.recaptcha={version:'v3',verified:true,action:'study_entry',verifiedAt:result.verified_at};save();
@@ -127,7 +127,7 @@ window.MovoraCloud=(()=>{
  window.addEventListener('online',changed);
  async function verifyCaptcha(token){const session=await auth();return request('/functions/v1/verify-recaptcha',{method:'POST',headers:{Authorization:'Bearer '+session.access_token},body:JSON.stringify({token,response_id:s.id})})}
  window.addEventListener('pagehide',()=>{if(typeof s==='undefined'||!s||s.completedAt)return;try{window.MovoraTracking.checkpoint();window.MovoraTracking.refreshExports();localStorage.setItem(key,JSON.stringify(s));const session=JSON.parse(localStorage.getItem(authKey())||'null');if(!session||session.expires_at*1000<Date.now())return;const row={id:s.id,owner_id:session.user.id,study_version:s.version,source:s.source,connect_id:s.source==='connect'?s.connectId:null,completed:false,payload:s};const body=JSON.stringify(row);if(new Blob([body]).size>60000)return;fetch(cfg.url+'/rest/v1/movora_responses?on_conflict=id',{method:'POST',keepalive:true,headers:{apikey:cfg.publishableKey,Authorization:'Bearer '+session.access_token,'Content-Type':'application/json',Prefer:'resolution=merge-duplicates'},body}).catch(()=>{})}catch(error){/* Regular checkpoints remain the primary save mechanism. */}});
- return{changed,complete,verifyCaptcha};
+ return{changed,complete,verifyCaptcha,prepare:auth};
 })();
 
 ;
