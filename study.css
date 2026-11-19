@@ -92,3 +92,5 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 .word-feedback{margin:16px 0 0;text-align:center;font-size:19px;color:#a01941;min-height:32px}.word-feedback.correct{color:#217044;font-weight:600}
 
 #word-help{display:block;margin:20px auto 0;font-size:18px}#word-help[hidden]{display:none}#word-hint{text-align:center;margin:16px 0 0;color:#333}
+
+.work-hours-note{display:block;margin-top:8px;font-size:inherit;font-weight:400}.work-hours-unit{display:block;margin:-14px 0 24px;color:#333}
