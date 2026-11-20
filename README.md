@@ -21,3 +21,5 @@ Supabase functions and SQL remain in supabase/ and run separately on the server.
 Apply supabase/018_advertisement_cleanup.sql after 017 in the Supabase web SQL Editor. It strengthens advertisement/version validation and labels retired fields in the dictionary. Older migrations preserve upgrade history; do not rerun them after the latest migration. No local SQL file proves the live database was updated.
 
 Upload app.js, index.html, study.css, research/word-paragraphs.json and the four condition advertisement/banner PNGs. The runtime has no word-task content, handlers, answer keys, timers or styles. Export columns for historical responses remain for interpretation; they are not administered in the advertisement instrument. Export SQL Editor query results as CSV if Table Editor selected-row export fails.
+
+Short-drama wording release: current instrument short-drama-questionnaire-v7-advertisement; apply 019 after 018. Upload app.js, index.html and research/word-paragraphs.json. Internal movieId and historical column names remain stable; current wording is short drama(s).
