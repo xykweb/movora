@@ -34,11 +34,6 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 .movie-details button{margin-top:auto}
 @media(max-width:1000px){.task-page main{padding-left:18px;padding-right:18px}.pairs{gap:24px}}
 @media(max-width:720px){.pairs{grid-template-columns:1fr}.poster{grid-template-columns:minmax(0,3fr) minmax(0,7fr)}}
-/* Keep the existing poster width; reduce only the details column by 15%. */
-.pairs{--pair-gap:40px;--original-card:calc((100vw - 48px - var(--pair-gap)) / 2);--original-content:calc(var(--original-card) - 62px);grid-template-columns:repeat(2,minmax(0,calc(var(--original-card) - var(--original-content)*.105)));justify-content:center}
-.poster{grid-template-columns:minmax(0,calc(var(--original-content)*.3)) minmax(0,1fr)}
-@media(max-width:1000px){.pairs{--pair-gap:24px;--original-card:calc((100vw - 36px - var(--pair-gap)) / 2)}}
-@media(max-width:720px){.pairs{grid-template-columns:1fr}.poster{grid-template-columns:minmax(0,3fr) minmax(0,7fr)}}
 /* Hover highlights the card; selection highlights only its button. */
 .poster,.poster.selected{border:1px solid #eadfe5;outline:none;background:#fff;box-shadow:0 8px 30px #382a3208;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
 .poster:hover,.poster:focus-within{border-color:#b5205b;transform:translateY(-4px);box-shadow:0 14px 32px #6f2a4920}
@@ -86,3 +81,19 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 .work-hours-note{display:block;margin-top:8px;font-size:inherit;font-weight:400}.work-hours-unit{display:block;margin:-14px 0 24px;color:#333}
 
 .advertisement{position:relative;width:100%;margin:28px auto 0}.advertisement>img{display:block;width:100%;height:auto}.advertisement .ad-watch{position:absolute;left:5.625%;top:66.33%;width:19.3%;height:8.12%;padding:0;border:0;border-radius:999px;background:transparent}.ad-watch:hover{box-shadow:0 0 0 3px #e65b97}.ad-watch:focus-visible{outline:4px solid #ed4d92;outline-offset:4px}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.condition-banner{margin:0 auto 30px;max-width:1800px}.condition-banner img{display:block;width:100%;height:auto}.intro-page:has(.advertisement) main{max-width:1120px}
+
+/* Current paired short-drama layout: normal header flow and independent columns. */
+.task-page main{margin:0;max-width:none;padding:0 24px 60px}
+.task-page .search-header{position:relative;top:auto;left:auto;right:auto;width:calc(100% + 48px);height:94px;margin:0 -24px;padding:15px 5vw}
+.task-page .condition-banner{width:100%;max-width:none;margin:0 auto 30px;border:1px solid #d8ccd3;border-radius:6px;overflow:hidden;background:#140f18}
+.task-page .condition-banner img{display:block;width:100%;height:auto;object-fit:contain}
+.task-page .pairs{width:100%;max-width:1720px;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin:0 auto;align-items:stretch}
+.task-page .poster{display:grid;grid-template-columns:minmax(0,32%) minmax(0,1fr);gap:24px;padding:18px;min-width:0;align-items:stretch}
+.task-page .poster .artwork{width:100%;min-width:0;height:auto;aspect-ratio:5/7;align-self:start;overflow:hidden;background:#fff}
+.task-page .poster .artwork img{position:static;inset:auto;display:block;width:100%;max-width:100%;height:auto;aspect-ratio:5/7;object-fit:contain}
+.task-page .movie-details{width:100%;min-width:0;overflow-wrap:break-word;display:flex;flex-direction:column;padding:0}
+.task-page .movie-details h2{width:100%;min-width:0;font-size:26px;line-height:1.45;height:calc(2.9em + 19px);min-height:calc(2.9em + 19px);margin:0 0 18px;padding:0 0 18px;display:flex;align-items:center;border-bottom:1px solid #d9d6d8}
+.task-page .movie-details button{width:100%;min-width:0;margin-top:auto}
+.task-page .pair-actions{max-width:1720px;margin:64px auto 0}
+@media(max-width:1100px){.task-page .pairs{gap:24px}.task-page .poster{gap:18px;padding:14px}.task-page .movie-details h2{font-size:22px}}
+@media(max-width:800px){.task-page .pairs{grid-template-columns:minmax(0,1fr);max-width:740px}.task-page .movie-details h2{font-size:24px}}
