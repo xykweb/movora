@@ -104,9 +104,14 @@
     "unit": "hours per week"
   },
   "advertisementInstructions": {
-    "text": "Movora is testing several concept posters for upcoming short drama projects to understand which short dramas are more appealing to potential audiences. Next, you will explore a series of short dramas across different genres. For each pair, please choose the short drama you would be more interested in watching. There are no right or wrong answers. Please make each choice based on your first impression and personal preference. Each choice will be between two short dramas.",
-    "adPrompt": "Below is an advertisement for Movora. Please look at it carefully to learn more, then click Watch on Movora to enter Movora.",
-    "note": "Note: Some follow-up questions will be based on the short dramas you choose and will ask about your specific opinions of these short dramas."
+    "text": "Below is an ad that Movora plans to run in the U.S. As a potential Movora viewer, your perspective can help us understand what everyday life is like for people who might use Movora and which short dramas they would be interested in watching. We’d like to invite you to explore Movora and share your feedback.",
+    "afterAd": "In the next section, you will be redirected to Movora and will see pairs of short dramas from different genres. For each pair, please choose the short drama you’d be more interested in watching.",
+    "notes": [
+      "Note 1. There are no right or wrong answers. Please make each choice based on your first impression and personal preference.",
+      "Note 2. You’ll see two short dramas at a time. You can change your selection by clicking the other option any time before moving on to the next pair.",
+      "Note 3. Some follow-up questions will ask what you think about the specific short dramas you selected."
+    ],
+    "entryPrompt": "Please take a moment to look at the ad. If you’ve read the instructions and agree to take part, click Watch on Movora to enter the platform."
   },
   "advertisements": {
     "busy": {
