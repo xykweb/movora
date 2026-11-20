@@ -3,7 +3,7 @@
 ## Where to edit
 - Questionnaire item wording and anchors: research/word-paragraphs.json → questions → stable id (q1, q2, q3…). Change text, low and high. Do not rename IDs.
 - General and movie-task instruction paragraphs: research/word-paragraphs.json → paragraphs. Current selection still uses paragraph prefixes; ask for a matching code update if changing a paragraph's opening words.
-- Task I word-puzzle introduction, instructions and both conditions: research/word-paragraphs.json → wordTask. Keep item IDs and order stable.
+- Current advertisement instruction and condition assets: research/word-paragraphs.json → advertisementInstructions and advertisements. Word-task content is retired.
 - Movie titles and genres: assets/dramas.xlsx (Genre / ItemNumber / Long Title / Short Title). Each row is a distinct movie; a/b identifies the movie, not title length. Blank Genre cells inherit the preceding genre. Original posters are assets/Poster/<ItemNumber>.jpeg; runtime optimized copies are assets/poster-web/<ItemNumber>.webp. Regenerate optimized copies when replacing posters.
 - Page headings, button labels, public configuration and behavior: app.js.
 - Visual styles: study.css.
@@ -18,6 +18,6 @@ Upload index.html, app.js, study.css, research/word-paragraphs.json, assets/ and
 Supabase functions and SQL remain in supabase/ and run separately on the server. Do not upload secrets. The dictionary must be synchronized when question wording or coding changes. Do not edit old migration scripts to change the running website.
 
 ## Current database upgrade
-For the word-task update, run supabase/013_task9_no_manipulation_check.sql after 011 and 012 in the Supabase web SQL Editor, after the earlier migrations. It updates submission validation, export columns and the English dictionary. Older SQL files are migration history, not current wording sources. Do not rerun old migrations after the latest migration: they can restore retired validation or dictionary definitions. Applying a local SQL file to the live database has not been verified here.
+Apply supabase/018_advertisement_cleanup.sql after 017 in the Supabase web SQL Editor. It strengthens advertisement/version validation and labels retired fields in the dictionary. Older migrations preserve upgrade history; do not rerun them after the latest migration. No local SQL file proves the live database was updated.
 
-Latest timing update: run supabase/015_wordtask_timing.sql after 014. Word_Task_1_Seconds through Word_Task_12_Seconds are seconds to the latest correct answer, excluding the automatic advance delay. Visible_Seconds excludes background-tab time; Elapsed_Seconds includes the delay. Older responses without item timing remain NULL. Export SQL results as CSV rather than selected rows in Table Editor.
+Upload app.js, index.html, study.css, research/word-paragraphs.json and the four condition advertisement/banner PNGs. The runtime has no word-task content, handlers, answer keys, timers or styles. Export columns for historical responses remain for interpretation; they are not administered in the advertisement instrument. Export SQL Editor query results as CSV if Table Editor selected-row export fails.
