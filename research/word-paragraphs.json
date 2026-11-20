@@ -1,62 +1,62 @@
 {
   "paragraphs": [
     "Thank you for participating in this survey, which takes about 4 minutes to complete and is restricted to participants using desktop devices only. Careless answers will misguide our research, so please read all the directions and questions carefully before you provide your answers.",
-    "This survey comes from Movora, which is an upcoming streaming platform featuring AI-generated movies. Before launch, we would like to better understand viewers’ preferences. We thus invite you to explore our website, discover streaming movies that interest you, and share your feedback.",
+    "This survey comes from Movora, which is an upcoming streaming platform featuring AI-generated short dramas. Before launch, we would like to better understand viewers’ preferences. We thus invite you to explore our website, discover streaming short dramas that interest you, and share your feedback.",
     "To ensure the best experience, please complete the survey in full-screen mode. After completing the survey, you can press the ESC key to exit full-screen mode. However, please do not exit early, as doing so may significantly affect your survey experience.",
     "If you are ready, enter your Connect ID below and click Next to enter full-screen mode."
   ],
   "questions": [
     {
       "id": "q1",
-      "text": "In making my selections, I preferred movies that feel easy to finish watching.",
+      "text": "In making my selections, I preferred short dramas that feel easy to finish watching.",
       "low": "Strongly disagree",
       "high": "Strongly agree"
     },
     {
       "id": "q2",
-      "text": "In making my selections, I preferred movies that I can watch all the way through with little effort.",
+      "text": "In making my selections, I preferred short dramas that I can watch all the way through with little effort.",
       "low": "Strongly disagree",
       "high": "Strongly agree"
     },
     {
       "id": "q3",
-      "text": "In making my selections, I preferred movies that feel effortless to watch from beginning to end.",
+      "text": "In making my selections, I preferred short dramas that feel effortless to watch from beginning to end.",
       "low": "Strongly disagree",
       "high": "Strongly agree"
     },
     {
       "id": "q4",
-      "text": "In making my selections, I preferred movies that allow me to easily picture the events taking place.",
+      "text": "In making my selections, I preferred short dramas that allow me to easily picture the events taking place.",
       "low": "Strongly disagree",
       "high": "Strongly agree"
     },
     {
       "id": "q5",
-      "text": "In making my selections, I preferred movies that allow me to picture myself in the scenes of the story.",
+      "text": "In making my selections, I preferred short dramas that allow me to picture myself in the scenes of the story.",
       "low": "Strongly disagree",
       "high": "Strongly agree"
     },
     {
       "id": "q6",
-      "text": "In making my selections, I preferred movies that allow me to be mentally involved in the narrative.",
+      "text": "In making my selections, I preferred short dramas that allow me to be mentally involved in the narrative.",
       "low": "Strongly disagree",
       "high": "Strongly agree"
     },
     {
       "id": "q7",
-      "text": "In making my selections, I preferred movies with detailed and well-developed storylines.",
+      "text": "In making my selections, I preferred short dramas with detailed and well-developed storylines.",
       "low": "Strongly disagree",
       "high": "Strongly agree"
     },
     {
       "id": "q8",
-      "text": "In making my selections, I preferred movies with substantial narrative depth.",
+      "text": "In making my selections, I preferred short dramas with substantial narrative depth.",
       "low": "Strongly disagree",
       "high": "Strongly agree"
     },
     {
       "id": "q9",
-      "text": "In making my selections, I preferred movies with rich story content.",
+      "text": "In making my selections, I preferred short dramas with rich story content.",
       "low": "Strongly disagree",
       "high": "Strongly agree"
     },
@@ -80,7 +80,7 @@
     },
     {
       "id": "q15",
-      "text": "How much do you like watching AI-generated movies?",
+      "text": "How much do you like watching AI-generated short dramas?",
       "low": "Not at all",
       "high": "Very much"
     },
@@ -93,7 +93,7 @@
   ],
   "surveyIntroduction": "In this section, we would like to hear about your thoughts and feelings during the experience. Please answer the following questions based on your true thoughts.",
   "affectInstructions": [
-    "Now, we’d like to learn about your desired subjective state when selecting those movies. Please select one square in the grid below to indicate how you would like to feel compared with how you feel right now.",
+    "Now, we’d like to learn about your desired subjective state when selecting those short dramas. Please select one square in the grid below to indicate how you would like to feel compared with how you feel right now.",
     "- Up or down: Select a square higher up if you need more arousal—that is, to feel more alert and stimulated—or lower down if you need less arousal.",
     "- Left or right: Select a square farther to the right if you need to feel more pleasant, or farther to the left if you need to feel less pleasant.",
     "The center square, marked N, represents your current state. Select this square if you do not need a change in either direction. Squares farther from the center indicate a greater desired change. Please consider both directions when choosing your square."
@@ -104,9 +104,9 @@
     "unit": "hours per week"
   },
   "advertisementInstructions": {
-    "text": "Movora is testing several concept posters for upcoming movie projects to understand which movies are more appealing to potential audiences. Next, you will explore a series of movies across different genres. For each pair, please choose the movie you would be more interested in watching. There are no right or wrong answers. Please make each choice based on your first impression and personal preference. Each choice will be between two movies.",
+    "text": "Movora is testing several concept posters for upcoming short drama projects to understand which short dramas are more appealing to potential audiences. Next, you will explore a series of short dramas across different genres. For each pair, please choose the short drama you would be more interested in watching. There are no right or wrong answers. Please make each choice based on your first impression and personal preference. Each choice will be between two short dramas.",
     "adPrompt": "Below is an advertisement for Movora. Please look at it carefully to learn more, then click Watch on Movora to enter Movora.",
-    "note": "Note: Some follow-up questions will be based on the movies you choose and will ask about your specific opinions of these movies."
+    "note": "Note: Some follow-up questions will be based on the short dramas you choose and will ask about your specific opinions of these short dramas."
   },
   "advertisements": {
     "busy": {
