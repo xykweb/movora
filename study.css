@@ -99,3 +99,5 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 @media(max-width:800px){.task-page .pairs{grid-template-columns:minmax(0,1fr);max-width:740px}.task-page .movie-details h2{font-size:24px}}
 
 .intro-page .ad-reflection-label{display:block;margin:24px 0;font:400 21px/1.65 Arial,Helvetica,sans-serif;color:#222}.ad-reflection-label textarea{display:block;width:100%;min-height:90px;margin:12px 0 0}
+
+.intro-page form>p.compact-note{margin-top:0;margin-bottom:0}.intro-page form>p.compact-note+p:not(.compact-note){margin-top:22px}
