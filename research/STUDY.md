@@ -7,3 +7,5 @@ Apply supabase/017_advertisement_manipulation.sql after 016; it removes word-tas
 Participant instruction wording is in research/word-paragraphs.json → advertisementInstructions. The supplied Chinese ad prompt is rendered in English. Assets are assets/brand/MovoraAd_Control.png, MovoraAd_TimeScarcity.png, MovoraBanner_Control.png and MovoraBanner_TimeScarcity.png.
 
 Current participant wording consistently uses short drama / short dramas. Instrument v7 distinguishes it from v6 movie wording. Internal movieId and historical field names remain stable. Apply migration 019 after 018.
+
+Current v8 short-drama-questionnaire-v8-ad-reflection: first Instruction shows assigned advertisement and two required text responses, followed by Next; second Instruction describes choices and repeats the same assigned ad with Watch on Movora overlay. Completion code A3FF37C5D0. Apply migration 020 after 019.

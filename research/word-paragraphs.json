@@ -104,14 +104,25 @@
     "unit": "hours per week"
   },
   "advertisementInstructions": {
-    "text": "Below is an ad that Movora plans to run in the U.S. As a potential Movora viewer, your perspective can help us understand what everyday life is like for people who might use Movora and which short dramas they would be interested in watching. We’d like to invite you to explore Movora and share your feedback.",
-    "afterAd": "In the next section, you will be redirected to Movora and will see pairs of short dramas from different genres. For each pair, please choose the short drama you’d be more interested in watching.",
+    "text": "As a potential Movora viewer, your perspective will help us understand which short dramas consumers want to watch. Thus, we want to invite you to explore Movora and share your feedback.",
+    "afterAd": "Next, you will be redirected to Movora and will see pairs of short dramas from different genres. For each pair, please choose the short drama you’d be more interested in watching.",
     "notes": [
       "Note 1. There are no right or wrong answers. Please make each choice based on your first impression and personal preference.",
       "Note 2. You’ll see two short dramas at a time. You can change your selection by clicking the other option any time before moving on to the next pair.",
       "Note 3. Some follow-up questions will ask what you think about the specific short dramas you selected."
     ],
-    "entryPrompt": "Please take a moment to look at the ad. If you’ve read the instructions and agree to take part, click Watch on Movora to enter the platform."
+    "entryPrompt": "If you’ve read the instructions and agree to take part, click Watch on Movora on the ad to enter the platform.",
+    "adPrompt": "To get started, take a look at the ad below, which Movora plans to run in the U.S. Please take a moment to read the headline and look at the images before answering the two questions below.",
+    "reflectionQuestions": [
+      {
+        "id": "firstImpression",
+        "text": "Based on the ad, what is your first impression of Movora?"
+      },
+      {
+        "id": "sloganReaction",
+        "text": "What do you think of the ad’s main slogan? Please briefly explain your reaction."
+      }
+    ]
   },
   "advertisements": {
     "busy": {
