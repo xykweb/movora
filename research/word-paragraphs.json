@@ -112,15 +112,15 @@
       "Note 3. Some follow-up questions will ask what you think about the specific short dramas you selected."
     ],
     "entryPrompt": "If you’ve read the instructions and agree to take part, click Watch on Movora on the ad to enter the platform.",
-    "adPrompt": "To get started, take a look at the ad below, which Movora plans to run in the U.S. Please take a moment to read the headline and look at the images before answering the two questions below.",
+    "adPrompt": "To get started, take a look at the ad below, which Movora plans to run in the U.S. Please take a moment to read the information in the ad and answer the following questions.",
     "reflectionQuestions": [
       {
         "id": "firstImpression",
-        "text": "Based on the ad, what is your first impression of Movora?"
+        "text": "What is your first impression of Movora?"
       },
       {
         "id": "sloganReaction",
-        "text": "What do you think of the ad’s main slogan? Please briefly explain your reaction."
+        "text": "What do you think of the ad’s slogan? Please briefly explain your reaction."
       }
     ]
   },
