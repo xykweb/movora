@@ -78,7 +78,7 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 /* Reserve exactly two title lines above the shared metadata baseline. */
 .movie-details h2{line-height:1.45;height:calc(2 * 1.45em + 19px);min-height:calc(2 * 1.45em + 19px);flex-shrink:0;box-sizing:border-box;padding-bottom:18px;margin-bottom:18px}.movie-details h2{display:flex;align-items:center;padding-top:0;padding-bottom:18px}
 
-.work-hours-note{display:block;margin-top:8px;font-size:inherit;font-weight:400}.work-hours-unit{display:block;margin:-14px 0 24px;color:#333}
+.work-hours-field{display:block;margin:24px 0;font:400 21px/1.65 Arial,Helvetica,sans-serif;color:#222}.work-hours-question{display:block}.work-hours-note{display:block;max-width:880px;margin:2px 0 14px;font-size:16px;font-style:italic;font-weight:400;line-height:1.45;color:#615961}.work-hours-response{display:flex;align-items:center;gap:12px}.work-hours-response input{display:block;width:180px;max-width:45%;margin:0}.work-hours-unit{display:inline;margin:0;color:#333;font-size:18px;white-space:nowrap}
 
 .advertisement{position:relative;width:100%;margin:28px auto 0}.advertisement>img{display:block;width:100%;height:auto}.advertisement .ad-watch{position:absolute;left:5.625%;top:66.33%;width:19.3%;height:8.12%;padding:0;border:0;border-radius:999px;background:transparent}.ad-watch:hover{box-shadow:0 0 0 3px #e65b97}.ad-watch:focus-visible{outline:4px solid #ed4d92;outline-offset:4px}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.condition-banner{margin:0 auto 30px;max-width:1800px}.condition-banner img{display:block;width:100%;height:auto}.intro-page:has(.advertisement) main{max-width:1120px}
 
@@ -98,6 +98,8 @@ body{font-size:17px;color:#382a32;background:#faf9f7}.intro-page main{max-width:
 @media(max-width:1100px){.task-page .pairs{gap:24px}.task-page .poster{gap:18px;padding:14px}.task-page .movie-details h2{font-size:22px}}
 @media(max-width:800px){.task-page .pairs{grid-template-columns:minmax(0,1fr);max-width:740px}.task-page .movie-details h2{font-size:24px}}
 
-.intro-page .ad-reflection-label{display:block;margin:24px 0;font:400 21px/1.65 Arial,Helvetica,sans-serif;color:#222}.ad-reflection-label textarea{display:block;width:100%;min-height:90px;margin:12px 0 0}
+.intro-page .ad-evaluation{margin-top:28px}
 
 .intro-page form>p.compact-note{margin-top:0;margin-bottom:0}.intro-page form>p.compact-note+p:not(.compact-note){margin-top:22px}
+
+.intro-page .ad-evaluation{margin-top:28px}.work-hours-response{flex-wrap:nowrap}.work-hours-note{font-size:16px!important;font-style:italic!important;font-weight:400!important}.work-hours-response input{flex:0 1 180px}.work-hours-response .work-hours-unit{flex:0 0 auto}
