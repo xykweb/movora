@@ -112,11 +112,11 @@
       "Note 3. Some follow-up questions will ask what you think about the specific short dramas you selected."
     ],
     "entryPrompt": "If you’ve read the instructions and agree to take part, click Watch on Movora on the ad to enter the platform.",
-    "adPrompt": "To get started, take a look at the ad below, which Movora plans to run in the U.S. Please answer the following questions according to your genuine thoughts.",
+    "adPrompt": "To get started, take a look at the ad below, which Movora plans to run in the U.S. Please answer the following questions based on your honest opinions.",
     "adEvaluationQuestions": [
       {
         "id": "visualDesign",
-        "text": "How visually pleasing do you think the visual design of this ad is?",
+        "text": "How visually pleasing is this ad?",
         "low": "Not visually pleasing at all",
         "high": "Very visually pleasing"
       },
