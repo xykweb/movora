@@ -9,3 +9,5 @@ Participant instruction wording is in research/word-paragraphs.json → advertis
 Current participant wording consistently uses short drama / short dramas. Instrument v7 distinguishes it from v6 movie wording. Internal movieId and historical field names remain stable. Apply migration 019 after 018.
 
 Current v8 short-drama-questionnaire-v8-ad-reflection: first Instruction shows assigned advertisement and two required text responses, followed by Next; second Instruction describes choices and repeats the same assigned ad with Watch on Movora overlay. Completion code A3FF37C5D0. Apply migration 020 after 019.
+
+Current instrument v9 short-drama-questionnaire-v9-ad-evaluation: ad evaluation uses four required 1–7 ratings, stored in adEvaluation, replacing the two open-ended questions. No AI-generated framing. Weekly work hours uses three visual rows, with inline input/unit. Apply 027 after 026; current export/dictionary contains 68 variables. Original historical payloads retained.

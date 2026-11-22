@@ -1,7 +1,7 @@
 {
   "paragraphs": [
     "Thank you for participating in this survey, which takes about 4 minutes to complete and is restricted to participants using desktop devices only. Careless answers will misguide our research, so please read all the directions and questions carefully before you provide your answers.",
-    "This survey comes from Movora, which is an upcoming streaming platform featuring AI-generated short dramas. Before launch, we would like to better understand viewers’ preferences. We thus invite you to explore our website, discover streaming short dramas that interest you, and share your feedback.",
+    "This survey comes from Movora, which is an upcoming streaming platform featuring short dramas. Before launch, we would like to invite you to explore our platform and share your feedback, which can help us to better understand viewers’ preferences.",
     "To ensure the best experience, please complete the survey in full-screen mode. After completing the survey, you can press the ESC key to exit full-screen mode. However, please do not exit early, as doing so may significantly affect your survey experience.",
     "If you are ready, enter your Connect ID below and click Next to enter full-screen mode."
   ],
@@ -80,7 +80,7 @@
     },
     {
       "id": "q15",
-      "text": "How much do you like watching AI-generated short dramas?",
+      "text": "How much do you like watching short dramas?",
       "low": "Not at all",
       "high": "Very much"
     },
@@ -91,7 +91,7 @@
       "high": "Very financially constrained"
     }
   ],
-  "surveyIntroduction": "In this section, we would like to hear about your thoughts and feelings during the experience. Please answer the following questions based on your true thoughts.",
+  "surveyIntroduction": "In the next section, we would like to hear about your thoughts and feelings during the experience. Please answer the following questions based on your true thoughts.",
   "affectInstructions": [
     "Now, we’d like to learn about your desired subjective state when selecting those short dramas. Please select one square in the grid below to indicate how you would like to feel compared with how you feel right now.",
     "- Up or down: Select a square higher up if you need more arousal—that is, to feel more alert and stimulated—or lower down if you need less arousal.",
@@ -112,15 +112,31 @@
       "Note 3. Some follow-up questions will ask what you think about the specific short dramas you selected."
     ],
     "entryPrompt": "If you’ve read the instructions and agree to take part, click Watch on Movora on the ad to enter the platform.",
-    "adPrompt": "To get started, take a look at the ad below, which Movora plans to run in the U.S. Please take a moment to read the information in the ad and answer the following questions.",
-    "reflectionQuestions": [
+    "adPrompt": "To get started, take a look at the ad below, which Movora plans to run in the U.S. Please answer the following questions according to your genuine thoughts.",
+    "adEvaluationQuestions": [
       {
-        "id": "firstImpression",
-        "text": "What is your first impression of Movora?"
+        "id": "visualDesign",
+        "text": "How visually pleasing do you think the visual design of this ad is?",
+        "low": "Not visually pleasing at all",
+        "high": "Very visually pleasing"
       },
       {
-        "id": "sloganReaction",
-        "text": "What do you think of the ad’s slogan? Please briefly explain your reaction."
+        "id": "sloganLiking",
+        "text": "Overall, how much do you like this slogan?",
+        "low": "Not at all",
+        "high": "Very much"
+      },
+      {
+        "id": "sloganFamiliarity",
+        "text": "Prior to this survey, how familiar were you with this slogan?",
+        "low": "Not familiar at all",
+        "high": "Very familiar"
+      },
+      {
+        "id": "platformFamiliarity",
+        "text": "Prior to this survey, how familiar were you with this kind of streaming platform?",
+        "low": "Not familiar at all",
+        "high": "Very familiar"
       }
     ]
   },
