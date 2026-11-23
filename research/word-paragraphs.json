@@ -127,10 +127,10 @@
         "high": "Very much"
       },
       {
-        "id": "sloganFamiliarity",
-        "text": "Prior to this survey, how familiar were you with this slogan?",
-        "low": "Not familiar at all",
-        "high": "Very familiar"
+        "id": "adLiking",
+        "text": "Overall, how much do you like this ad?",
+        "low": "Not at all",
+        "high": "Very much"
       },
       {
         "id": "platformFamiliarity",

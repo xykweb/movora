@@ -11,3 +11,7 @@ Current participant wording consistently uses short drama / short dramas. Instru
 Current v8 short-drama-questionnaire-v8-ad-reflection: first Instruction shows assigned advertisement and two required text responses, followed by Next; second Instruction describes choices and repeats the same assigned ad with Watch on Movora overlay. Completion code A3FF37C5D0. Apply migration 020 after 019.
 
 Current instrument v9 short-drama-questionnaire-v9-ad-evaluation: ad evaluation uses four required 1–7 ratings, stored in adEvaluation, replacing the two open-ended questions. No AI-generated framing. Weekly work hours uses three visual rows, with inline input/unit. Apply 027 after 026; current export/dictionary contains 68 variables. Original historical payloads retained.
+
+Current v10: third advertisement rating is ad liking (adEvaluation.adLiking / Ad_Liking), replacing slogan familiarity. Question order: visualDesign, sloganLiking, adLiking, platformFamiliarity. Historical sloganFamiliarity is not relabeled. Apply migration 029 after 028; 68 current export variables remain.
+
+Current preview reset: 030_reset_preview_current.sql clears preview-only responses (aborts if any Connect rows exist), rebuilds 68 current export/dictionary fields, and removes retired instrument validation. Current-only guard rejects old instrument drafts. Preview namespace reset1 starts a fresh response after the site update. Close old tabs before resetting.
